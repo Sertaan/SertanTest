@@ -3,7 +3,7 @@ package se.reky.hakan;
 import java.util.Scanner;
 
 public class IOHandler {
-    private final Scanner scanner;
+    private Scanner scanner;
 
     public IOHandler(Scanner scanner) {
         this.scanner = scanner;
@@ -27,11 +27,18 @@ public class IOHandler {
         System.out.println(toOutput);
     }
 
-    int readInt(){
+    int nextInt(){
         return scanner.nextInt();
     }
-    String readLine(){
+    String nextLine(){
         return scanner.nextLine();
     }
+    boolean hasNextInt(){
+        return scanner.hasNextInt();
+    }
 
+
+    public void setScanner(Scanner scanner) {
+        this.scanner = scanner;
+    }
 }
