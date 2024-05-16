@@ -65,10 +65,19 @@ class IOHandlerTest {
         return new IOHandler(scanner);
     }
 
+    @Test
+    void testHasNextInt() {
+        IOHandler ioHandler = initIOHandler("123");
 
+        assertTrue(ioHandler.hasNextInt());
 
-/*
-NextInt & selenium
- */
+        ioHandler = initIOHandler("Hello");
+
+        assertFalse(ioHandler.hasNextInt());
+    }
+
 
 }
+/*
+selenium
+ */
