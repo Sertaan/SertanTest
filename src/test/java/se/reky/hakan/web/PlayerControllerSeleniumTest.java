@@ -35,7 +35,7 @@ public class PlayerControllerSeleniumTest {
     public void testNumberOfPlayersDisplayed() {
         driver.get("http://localhost:8080/players");
         List<WebElement> players = driver.findElements(By.className("player-name"));
-        Assertions.assertEquals(4, players.size(), "Should display exactly two players");
+        Assertions.assertEquals(2, players.size(), "Should display exactly two players");
     }
 
     @Test
